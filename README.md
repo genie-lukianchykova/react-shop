@@ -1,1 +1,1 @@
-# Furniture Store (Idea stage)
+# Lamp Store (Idea stage)
