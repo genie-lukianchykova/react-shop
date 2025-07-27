@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ShopSection from "./components/ShopSection";
-
+import GallerySection from "./components/GallerySection";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <header>
         <Header />
       </header>
-        <ShopSection />
+        <GallerySection />
       <footer className="my-4">
         <Footer />
       </footer>
