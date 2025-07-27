@@ -38,11 +38,7 @@ export default function GallerySection() {
                 </Carousel.Item>
             )
         })
-      }  
-      
-      
-        
-        
+      }    
     </Carousel>
   )
 }
