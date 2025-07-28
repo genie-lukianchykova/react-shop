@@ -31,8 +31,6 @@ export default function Header() {
               <FaShoppingCart className="me-2" />
               Your Cart
             </Button>
-            <Nav.Link href="#home" className="mx-4">About Us</Nav.Link>
-            <Nav.Link href="#link" className="mx-4">Contacts</Nav.Link>
           </Nav>      
       </Navbar>
       <ShopCart show={cartOpen} onClose={closeCart} />

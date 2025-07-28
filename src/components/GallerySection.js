@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Carousel } from 'react-bootstrap'
+import { useNavigate } from "react-router";
 
 const lamps = [
   {
@@ -20,6 +21,7 @@ const lamps = [
 ];
 
 export default function GallerySection() {
+  const navigate = useNavigate();
   return (
     <Carousel>
       {
@@ -33,7 +35,12 @@ export default function GallerySection() {
                     />
                     <Carousel.Caption className="carousel-caption-custom">
                         <h2 className="carousel-title">{lamp.title}</h2>
-                        <Button variant="outline-light" size="lg">Shop now</Button>
+                        <Button 
+                          onClick={() => navigate('/shop-now')} 
+                          variant="outline-light" 
+                          size="lg"> 
+                            Shop now
+                        </Button>
                     </Carousel.Caption>
                 </Carousel.Item>
             )
