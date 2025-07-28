@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <div>
-      <Navbar expand="lg" className="bg-white py-4 px-5">       
+      <Navbar expand="lg" className="bg-white py-4 px-5 fixed-top">       
           <Navbar.Brand>
             <img
               src={logo}
