@@ -58,3 +58,24 @@ header .cart-button:focus {
   bottom: 20%;
 }
 
+.text-body {
+  color: #222 !important;
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 20em;
+}
+
+.shop-card {
+  border: none;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.shop-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
