@@ -8,11 +8,35 @@ body {
     background-color: #fff;
     color: #222;
     font-family: "Montserrat", sans-serif;
-    font-weight: 300;
 }
 
 header {
     font-weight:500;
+}
+
+header .cart-button {
+  color: #555;
+  font-weight:500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 0;
+}
+
+header .cart-button:hover {
+  color: #111;
+  background: none;
+}
+
+header .cart-button.active {
+  color: #B3916F;
+  background: none;
+}
+
+header .cart-button:focus {
+  background: none;
 }
 
 .carousel-img {
@@ -20,7 +44,6 @@ header {
   object-fit: cover;
   filter: brightness(60%);
   object-position: center;
-
 }
 
 .carousel-title {

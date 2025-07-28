@@ -10,6 +10,7 @@ function App() {
         <Header />
       </header>
         <GallerySection />
+        <ShopSection />
       <footer className="my-4">
         <Footer />
       </footer>
