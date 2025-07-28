@@ -1,0 +1,16 @@
+{
+    "items": [
+    {
+        "id": 1,
+        "title": "Lamp 1",
+        "image": "../img/lamp1.png",
+        "price": "24,90"
+    },
+    {
+        "id": 2,
+        "title": "Lamp 1",
+        "image": "../img/lamp1.png",
+        "price": "24,90"
+    }
+    ]
+}
