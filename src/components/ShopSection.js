@@ -45,26 +45,27 @@ export default function ShopSection() {
   return (
     <section className="py-5 bg-light text-body">
       <Container>
+        
         <h2 className="mb-1 fw-bold">Collections</h2>
-        <p className="text-muted mb-5">
+        <p className="mb-5 fw-light">
           Lighting, but with a personality. Bold collections for bold spaces — pick your vibe.
         </p>
 
         <Row className="g-5">
           {items.map(item => (
             <Col key={item.id} xs={12} sm={8} md={6} lg={4}>
-              <Card className="h-100 shop-card animate-fade">
+              <Card className="shop-card">
                 <Card.Img 
                   variant="top" 
                   src={item.image} 
                   className="rounded-top-4" 
                 />
-                <Card.Body className="d-flex flex-column text-body">
+                <Card.Body className="flex-column text-body">
                   <Card.Title className="fw-semibold fs-5">{item.title}</Card.Title>
                   <Card.Text className="text-muted flex-grow-1">{item.desc}</Card.Text>
                   <Button 
                     variant="outline-dark" 
-                    className="align-self-start mt-3"
+                    className="align-start mt-3"
                   > More <FaArrowRight className="ms-2" />
                   </Button>
                 </Card.Body>
