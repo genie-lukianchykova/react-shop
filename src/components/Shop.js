@@ -55,7 +55,7 @@ export default function Shop() {
         
         <Row className="g-5">
           {items.map(item => (
-            <Col key={item.id} xs={12} sm={6} md={4} lg={3}>
+            <Col key={item.id} xs={6} sm={6} md={4} lg={3}>
               <Card className="shadow-sm border-0">
                 <Card.Img 
                   variant="item" 
