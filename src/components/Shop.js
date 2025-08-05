@@ -1,49 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 import { FaAngleRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-
-const items = [
-    {
-        id: 1,
-        title: "Lamp 1",
-        image: require("../img/lamp1.png"),
-        price: "24,90"
-    },
-    {
-        id: 2,
-        title: "Lamp 1",
-        image: require("../img/lamp1.png"),
-        price: "24,90"
-    },
-    {
-        id: 3,
-        title: "Lamp 1",
-        image: require("../img/lamp1.png"),
-        price: "24,90"
-    },
-    {
-        id: 4,
-        title: "Lamp 1",
-        image: require("../img/lamp1.png"),
-        price: "24,90"
-    },
-    {
-        id: 5,
-        title: "Lamp 1",
-        image: require("../img/lamp1.png"),
-        price: "24,90"
-    },
-    {
-        id: 6,
-        title: "Lamp 1",
-        image: require("../img/lamp1.png"),
-        price: "24,90"
-    },
-];
+import useFetch from './hooks/useFetch';
 
 export default function Shop() {
-  const [itemsi, setItems] = useState(null);
+  const {items, isPending, error} = useFetch('http://localhost:8000/items');
   
   return (
     <section className="py-3 bg-light text-body">
@@ -52,13 +14,15 @@ export default function Shop() {
           <Link to="/" className="text-body-secondary">Start Page</Link> <FaAngleRight/> All Products
         </p>
         <h2 className="mb-5 fw-bold">All products</h2>
-        
+        { error && <div className="mb-5">{ error }</div>}
+        { isPending && <div className="mb-5">Loading...</div> }
+
         <Row className="g-5">
-          {items.map(item => (
+          {items && items.map(item => (
             <Col key={item.id} xs={6} sm={6} md={4} lg={3}>
               <Card className="shadow-sm border-0">
                 <Card.Img 
-                  variant="item" 
+                  variant="bottom" 
                   src={item.image}      
                 />
                 <Card.Body className="flex-column justify-content-between">

@@ -81,7 +81,7 @@ header .cart-button:focus {
   box-shadow: 0 30px 40px rgba(0, 0, 0, 0.1);
 }
 
-.card-img-item {
+.card-img-bottom {
   object-fit: cover;
   height: 15em;
   padding: 0.7em;
@@ -89,7 +89,7 @@ header .cart-button:focus {
   border-radius: 0.9em;
 }
 
-.card-img-item:hover {
+.card-img-bottom:hover {
   transform: scale(1.05);
 }
 
