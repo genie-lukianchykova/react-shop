@@ -10,6 +10,7 @@ export default function ShopSection() {
   return (
     <section className="py-3 bg-light text-body">
       <Container>
+
         <p className="text-muted mb-5">
           <Link to="/" className="text-body-secondary">Start Page</Link> <FaAngleRight/> All Products
         </p>
@@ -20,18 +21,18 @@ export default function ShopSection() {
         <Row className="g-5">
           {items && items.map(item => (
             <Col key={item.id} xs={6} sm={6} md={4} lg={3}>
-              <Card className="shadow-sm border-0">
+              <Card className="shadow-sm border-0 h-100 d-flex flex-column">
                 <Card.Img 
                   variant="bottom" 
                   src={item.image}      
                 />
-                <Card.Body className="flex-column justify-content-between">
+                <Card.Body className="d-flex flex-column">
                   <Card.Title className="fs-5 fw-semibold mb-1">{item.title}</Card.Title>
                   <Card.Text className="mb-4">{item.price}$</Card.Text>
                   <Button 
                     variant="dark"
-                    className="ms-auto d-block"
-                  > Buy
+                    className="mt-auto ms-auto"
+                  > Add to Cart
                   </Button>
                 </Card.Body>
               </Card>

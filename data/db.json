@@ -2,21 +2,95 @@
     "items": [
     {
         "id": 1,
-        "title": "Lamp 1",
-        "image": "/img/arabian-nights/7.png",
-        "price": "24,90"
+        "title": "Desk Diva",
+        "description": "Small size, big mood. This cutie owns your desk and knows it.",
+        "image": "/img/bubble-gum/1.png",
+        "price": "50,00"
     },
     {
         "id": 2,
-        "title": "Lamp 1",
-        "image": "/img/arabian-nights/7.png",
-        "price": "24,90"
+        "title": "Pink Tripod Queen",
+        "description": "Legs for days and lighting to slay — she's the queen of your living room.",
+        "image": "/img/bubble-gum/2.png",
+        "price": "100,00"
     },
     {
         "id": 3,
-        "title": "Lamp 1",
+        "title": "Glam Corner",
+        "description": "Serving soft light and serious drama. Perfect for a velvet chair moment.",
+        "image": "/img/bubble-gum/3.png",
+        "price": "100,00"
+    },
+    {
+        "id": 4,
+        "title": "Bubble Dome",
+        "description": "Cute, curvy, and full of glow. It’s giving “Barbie goes architectural.",
+        "image": "/img/bubble-gum/4.png",
+        "price": "80,00"
+    },
+    {
+        "id": 5,
+        "title": "Study Crush",
+        "description": "Adorably focused. Makes spreadsheets, books, and to-do lists look way cuter.",
+        "image": "/img/bubble-gum/5.png",
+        "price": "50,00"
+    },
+    {
+        "id": 6,
+        "title": "Glow Pop",
+        "description": "Big, bold, and blushing. Your space just got a power move in pink.",
+        "image": "/img/bubble-gum/6.png",
+        "price": "150,00"
+    },
+    {
+        "id": 7,
+        "title": "Desert Bloom",
+        "description": "Soft curves, warm gold, and just enough mystery to keep them guessing.",
         "image": "/img/arabian-nights/7.png",
-        "price": "24,90"
+        "price": "100,00"
+    },
+    {
+        "id": 8,
+        "title": "Mirage Chandelier",
+        "description": "Light dances like a desert illusion — ornate, golden, unforgettable.",
+        "image": "/img/arabian-nights/8.png",
+        "price": "150,00"
+    },
+    {
+        "id": 9,
+        "title": "Sultan's Halo",
+        "description": "Regal glow with timeless grace. Fit for modern palaces and calm retreats.",
+        "image": "/img/arabian-nights/9.png",
+        "price": "200,00"
+    },
+    {
+        "id": 10,
+        "title": "Moon Over Marrakesh",
+        "description": "Layers of gold and patterned light — like a lullaby on your ceiling.",
+        "image": "/img/arabian-nights/10.png",
+        "price": "200,00"
+    },
+    {
+        "id": 11,
+        "title": "Kasbah Ember",
+        "description": "Rustic warmth, vintage bronze, and ancient soul. Lights the room like a secret.",
+        "image": "/img/arabian-nights/11.png",
+        "price": "100,00"
+    },
+    {
+        "id": 12,
+        "title": "Blue Oasis",
+        "description": "Cool tones in a warm world. Stained glass meets storybook scholar energy.",
+        "image": "/img/arabian-nights/12.png",
+        "price": "50,00"
+    },
+    {
+        "id": 13,
+        "title": "Blue Oasis",
+        "description": "Cool tones in a warm world. Stained glass meets storybook scholar energy.",
+        "image": "/img/arabian-nights/12.png",
+        "price": "50,00"
     }
+
     ]
 }
