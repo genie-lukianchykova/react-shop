@@ -1,8 +1,8 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import ShopSection from "./components/ShopSection";
+import ShowSection from "./components/ShowSection";
 import GallerySection from "./components/GallerySection";
-import Shop from "./components/Shop";
+import ShopSection from "./components/ShopSection";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -18,11 +18,11 @@ function App() {
             element={
               <>
                 <GallerySection />
-                <ShopSection />
+                <ShowSection />
               </>
             }
           />
-          <Route path="/shop-now" element={<Shop />} />
+          <Route path="/shop-now" element={<ShopSection />} />
         </Routes>
         <footer className="my-4">
           <Footer />

@@ -1,72 +1,37 @@
 import React from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
-import { FaArrowRight } from 'react-icons/fa';
-
-const items = [
-  {
-    id: 1,
-    title: "Bubble Gum B*tch",
-    desc: "Sugar, spice, and zero apologies. Pink lights for main character energy.",
-    image: require("../img/bubbleGum.png"),
-  },
-  {
-    id: 2,
-    title: "Arabian Nights",
-    desc: "Dripping in drama. Velvet shadows, golden glow — mystery never looked this good.",
-    image: require("../img/arabianNights.png"),
-  },
-  {
-    id: 3,
-    title: "Classique",
-    desc: "Old money style, no dust. Think marble halls and perfectly placed lighting.",
-    image: require("../img/classique.png"),
-  },
-  {
-    id: 4,
-    title: "Cozy Mozy",
-    desc: "Soft lights, warm woods, all the cozy feels. Like a hug—but for your whole room.",
-    image: require("../img/cozy.png"),
-  },
-  {
-    id: 5,
-    title: "Gold Standard",
-    desc: "All that glitters is gold. Loud, luxe, and impossible to ignore.",
-    image: require("../img/gold.png"),
-  },
-  {
-    id: 6,
-    title: "Minimalism Era",
-    desc: "No clutter. No chaos. Just clean lines and quiet confidence.",
-    image: require("../img/minimal.png"),
-  },
-];
+import { FaAngleRight } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import useFetch from './hooks/useFetch';
 
 export default function ShopSection() {
+  const {items, isPending, error} = useFetch('http://localhost:8000/items');
+  
   return (
-    <section className="py-5 bg-light text-body">
+    <section className="py-3 bg-light text-body">
       <Container>
-        
-        <h2 className="mb-1 fw-bold">Collections</h2>
-        <p className="mb-5 fw-light">
-          Lighting, but with a personality. Bold collections for bold spaces — pick your vibe.
+        <p className="text-muted mb-5">
+          <Link to="/" className="text-body-secondary">Start Page</Link> <FaAngleRight/> All Products
         </p>
+        <h2 className="mb-5 fw-bold">All products</h2>
+        { error && <div className="mb-5">{ error }</div>}
+        { isPending && <div className="mb-5">Loading...</div> }
 
         <Row className="g-5">
-          {items.map(item => (
-            <Col key={item.id} xs={6} sm={8} md={6} lg={4}>
-              <Card className="shop-card">
+          {items && items.map(item => (
+            <Col key={item.id} xs={6} sm={6} md={4} lg={3}>
+              <Card className="shadow-sm border-0">
                 <Card.Img 
-                  variant="top" 
-                  src={item.image} 
-                  className="rounded-top-4" 
+                  variant="bottom" 
+                  src={item.image}      
                 />
-                <Card.Body className="flex-column text-body">
-                  <Card.Title className="fw-semibold fs-5">{item.title}</Card.Title>
-                  <Card.Text className="text-muted flex-grow-1">{item.desc}</Card.Text>
+                <Card.Body className="flex-column justify-content-between">
+                  <Card.Title className="fs-5 fw-semibold mb-1">{item.title}</Card.Title>
+                  <Card.Text className="mb-4">{item.price}$</Card.Text>
                   <Button 
-                    variant="outline-dark" 
-                    className="align-start mt-3"
-                  > More <FaArrowRight className="ms-2" />
+                    variant="dark"
+                    className="ms-auto d-block"
+                  > Buy
                   </Button>
                 </Card.Body>
               </Card>
@@ -75,5 +40,5 @@ export default function ShopSection() {
         </Row>
       </Container>
     </section>
-  );
+  )
 }
