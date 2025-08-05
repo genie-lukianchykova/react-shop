@@ -9,6 +9,11 @@ body {
     color: #222;
     font-family: "Montserrat", sans-serif;
     padding-top: 5.5em;
+    overflow-y: scroll !important;
+}
+
+body.offcanvas-backdrop.modal-open{
+  margin-right: 0 !important;
 }
 
 header {
@@ -17,7 +22,7 @@ header {
 }
 
 header .cart-button {
-  color: #555;
+  color: #111;
   font-weight:500;
   font-size: 1em;
   text-decoration: none;
@@ -29,16 +34,12 @@ header .cart-button {
 }
 
 header .cart-button:hover {
-  color: #111;
-  background: none;
-}
-
-header .cart-button.active {
   color: #B3916F;
   background: none;
 }
 
-header .cart-button:focus {
+header .cart-button.active {
+  color: #555;
   background: none;
 }
 

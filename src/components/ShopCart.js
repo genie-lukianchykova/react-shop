@@ -7,7 +7,7 @@ export default function ShopCart({ show, onClose }) {
   const { cart, removeFromCart, getTotal, decreaseQuantity, increaseQuantity } = useCart();
 
   return (
-    <Offcanvas show={show} onHide={onClose} placement="end">
+    <Offcanvas show={show} onHide={onClose} placement="end" scroll={true}>
       <Offcanvas.Header closeButton>
         <Offcanvas.Title>Your Cart</Offcanvas.Title>
       </Offcanvas.Header>

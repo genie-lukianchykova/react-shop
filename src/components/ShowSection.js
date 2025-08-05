@@ -54,20 +54,23 @@ export default function ShowSection() {
         <Row className="g-5">
           {items.map(item => (
             <Col key={item.id} xs={6} sm={8} md={6} lg={4}>
-              <Card className="shop-card">
+              <Card className="shop-card h-100 d-flex flex-column">
                 <Card.Img 
                   variant="top" 
                   src={item.image} 
                   className="rounded-top-4" 
                 />
-                <Card.Body className="flex-column text-body">
+                <Card.Body className="d-flex flex-column text-body">
                   <Card.Title className="fw-semibold fs-5">{item.title}</Card.Title>
                   <Card.Text className="text-muted flex-grow-1">{item.desc}</Card.Text>
-                  <Button 
-                    variant="outline-dark" 
-                    className="align-start mt-3"
-                  > More <FaArrowRight className="ms-2" />
+                  <div className="mt-3">
+                    <Button 
+                      variant="outline-dark" 
+                      className=""
+                    > More <FaArrowRight className="ms-2" />
                   </Button>
+                  </div>
+                  
                 </Card.Body>
               </Card>
             </Col>
