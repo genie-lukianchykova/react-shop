@@ -4,10 +4,17 @@ import { FaAngleRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import useFetch from './hooks/useFetch';
 import { useCart } from './context/CartContext';
+import useFilter from './hooks/useFilter';
 
 export default function ShopSection() {
   const { addToCart } = useCart();
   const {items, isPending, error} = useFetch('http://localhost:8000/items');
+  const {
+    filteredItems,
+    types,
+    selectedType,
+    setSelectedType
+  } = useFilter(items);
   
   return (
     <section className="py-3 bg-light text-body">
@@ -16,12 +23,25 @@ export default function ShopSection() {
         <p className="text-muted mb-5">
           <Link to="/" className="text-body-secondary">Start Page</Link> <FaAngleRight/> All Products
         </p>
+
         <h2 className="mb-5 fw-bold">All products</h2>
+        <div className="mb-4 d-flex flex-wrap gap-2">
+          {types.map(type => (
+            <Button
+              key={type}
+              variant={selectedType === type ? 'dark' : 'outline-dark'}
+              onClick={() => setSelectedType(type)}
+            >
+              {type}
+            </Button>
+          ))}
+        </div>
+
         { error && <div className="mb-5">{ error }</div>}
         { isPending && <div className="mb-5">Loading...</div> }
 
         <Row className="g-5">
-          {items && items.map(item => (
+          {items && filteredItems.map(item => (
             <Col key={item.id} xs={6} sm={6} md={4} lg={3}>
               <Card className="shadow-sm border-0 h-100 d-flex flex-column">
                 <Card.Img 
