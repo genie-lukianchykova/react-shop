@@ -3,8 +3,10 @@ import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 import { FaAngleRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import useFetch from './hooks/useFetch';
+import { useCart } from './context/CartContext';
 
 export default function ShopSection() {
+  const { addToCart } = useCart();
   const {items, isPending, error} = useFetch('http://localhost:8000/items');
   
   return (
@@ -32,6 +34,7 @@ export default function ShopSection() {
                   <Button 
                     variant="dark"
                     className="mt-auto ms-auto"
+                    onClick={() => addToCart(item)}
                   > Add to Cart
                   </Button>
                 </Card.Body>

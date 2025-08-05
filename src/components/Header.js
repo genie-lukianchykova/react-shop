@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
-import { Button, Navbar, Nav} from 'react-bootstrap';
+import React from 'react';
+import { Button, Navbar, Nav, Badge} from 'react-bootstrap';
 import logo from '../img/logo.svg';
 import { FaShoppingCart } from "react-icons/fa";
 import ShopCart from './ShopCart';
+import { useCart } from './context/CartContext';
 
 export default function Header() {
-  const [cartOpen, setCartOpen] = useState(false);
-
-  const toggleCart = () => setCartOpen(prev => !prev);
-  const closeCart = () => setCartOpen(false);
+  const { cart, toggleCart, cartOpen, closeCart } = useCart();
 
   return (
     <div>
@@ -28,8 +26,17 @@ export default function Header() {
               className={`cart-button mx-4 ${cartOpen && 'active'}`}
               onClick={toggleCart}
             >
-              <FaShoppingCart className="me-2" />
-              <span className="d-none d-sm-inline">Your Cart</span>
+              <div className="position-relative">
+                <FaShoppingCart className="me-2" size="30" />
+                <Badge
+                  bg="secondary"
+                  pill
+                  className="position-absolute translate-middle"
+                  style={{ fontSize: '0.65rem' }}
+                >
+                  {cart.reduce((sum, item) => sum + item.quantity, 0)}
+                </Badge>
+              </div>
             </Button>
           </Nav>      
       </Navbar>
