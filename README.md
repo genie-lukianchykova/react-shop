@@ -23,11 +23,11 @@ This project is part of my frontend developer portfolio to demonstrate my skills
 ## 📁 Folder Structure
 ```
 src/
-├── components/     // Reusable UI components
-├── pages/          // Main pages
-├── data/           // Static product data
-├── App.js          // Main app component
-├── index.js        // Entry point
+├── components/
+├── pages/
+├── data/
+├── App.js
+├── index.js
 ```
 
 ## 📝 Notes
