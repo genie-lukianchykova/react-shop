@@ -21,13 +21,14 @@ This project is part of my frontend developer portfolio to demonstrate my skills
 - **CSS / Bootstrap 5**
 
 ## 📁 Folder Structure
-
+```
 src/
 ├── components/     // Reusable UI components
 ├── pages/          // Main pages
 ├── data/           // Static product data
 ├── App.js          // Main app component
 ├── index.js        // Entry point
+```
 
 ## 📝 Notes
 
