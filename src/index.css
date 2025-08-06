@@ -9,11 +9,6 @@ body {
     color: #222;
     font-family: "Montserrat", sans-serif;
     padding-top: 5.5em;
-    overflow-y: scroll !important;
-}
-
-body.offcanvas-backdrop.modal-open{
-  margin-right: 0 !important;
 }
 
 header {
