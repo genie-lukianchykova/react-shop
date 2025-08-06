@@ -1,9 +1,23 @@
 import React from 'react'
+import { Col, Row } from 'react-bootstrap'
 
 export default function Footer() {
   return (
     <div>
-      <span>Copyright &copy; 2025 Lumos.</span>
+      <Row className="my-5 mx-5">
+        <Col md={4}>
+          <span>Copyright &copy; 2025 Lumos.</span>
+        </Col>
+        <Col md={4}>
+          <Row className="fw-semibold">Contacts</Row>
+          <Row>info@lumos.com</Row>
+          <Row>+x(xx)-xxx-xxx-xx</Row>
+        </Col>
+        <Col md={4}>
+          <Row className="fw-semibold">Adress</Row>
+          <Row>XXXX,st.XXXXXXX,XX</Row>
+        </Col>
+      </Row>
     </div>
   )
 }
