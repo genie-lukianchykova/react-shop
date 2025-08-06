@@ -5,7 +5,7 @@
         "title": "Desk Diva",
         "description": "Small size, big mood. This cutie owns your desk and knows it.",
         "type": "Desk lamp",
-        "collection": "bubble-gum",
+        "collection": "bubble-gum-btch",
         "image": "/img/bubble-gum/1.png",
         "price": "50,00"
     },
@@ -14,7 +14,7 @@
         "title": "Pink Tripod Queen",
         "description": "Legs for days and lighting to slay — she's the queen of your living room.",
         "type": "Floor lamp",
-        "collection": "bubble-gum",
+        "collection": "bubble-gum-btch",
         "image": "/img/bubble-gum/2.png",
         "price": "100,00"
     },
@@ -23,7 +23,7 @@
         "title": "Glam Corner",
         "description": "Serving soft light and serious drama. Perfect for a velvet chair moment.",
         "type": "Floor lamp",
-        "collection": "bubble-gum",
+        "collection": "bubble-gum-btch",
         "image": "/img/bubble-gum/3.png",
         "price": "100,00"
     },
@@ -32,7 +32,7 @@
         "title": "Bubble Dome",
         "description": "Cute, curvy, and full of glow. It’s giving “Barbie goes architectural.",
         "type": "Ceiling lamp",
-        "collection": "bubble-gum",
+        "collection": "bubble-gum-btch",
         "image": "/img/bubble-gum/4.png",
         "price": "80,00"
     },
@@ -41,7 +41,7 @@
         "title": "Study Crush",
         "description": "Adorably focused. Makes spreadsheets, books, and to-do lists look way cuter.",
         "type": "Desk lamp",
-        "collection": "bubble-gum",
+        "collection": "bubble-gum-btch",
         "image": "/img/bubble-gum/5.png",
         "price": "50,00"
     },
@@ -50,7 +50,7 @@
         "title": "Glow Pop",
         "description": "Big, bold, and blushing. Your space just got a power move in pink.",
         "type": "Ceiling lamp",
-        "collection": "bubble-gum",
+        "collection": "bubble-gum-btch",
         "image": "/img/bubble-gum/6.png",
         "price": "150,00"
     },
@@ -275,7 +275,7 @@
         "title": "Iron Mind",
         "description": "Industrial strength, clean curves — a focused beam for thinkers, makers, and late-night strategists.",
         "type": "Desk lamp",
-        "collection": "minimalism",
+        "collection": "minimalism-era",
         "image": "/img/minimalism/31.png",
         "price": "65,00"
     },
@@ -284,7 +284,7 @@
         "title": "Soft Logic",
         "description": "Smooth, clean, and smart — minimal desk lighting with maximum practical clarity.",
         "type": "Desk lamp",
-        "collection": "minimalism",
+        "collection": "minimalism-era",
         "image": "/img/minimalism/32.png",
         "price": "65,00"
     },
@@ -293,7 +293,7 @@
         "title": "Mono Frame",
         "description": "A bold ceiling circle, matte and modern — lighting that defines a space without dominating it.",
         "type": "Ceiling lamp",
-        "collection": "minimalism",
+        "collection": "minimalism-era",
         "image": "/img/minimalism/33.png",
         "price": "100,00"
     },
@@ -302,7 +302,7 @@
         "title": "Float",
         "description": "Layered geometry meets ambient calm — like a halo hovering quietly above your living space.",
         "type": "Ceiling lamp",
-        "collection": "minimalism",
+        "collection": "minimalism-era",
         "image": "/img/minimalism/34.png",
         "price": "95,00"
     },
@@ -311,7 +311,7 @@
         "title": "Neo Silence",
         "description": "Weightless design with silent luxury — it doesn't shout, it settles the whole room.",
         "type": "Ceiling lamp",
-        "collection": "minimalism",
+        "collection": "minimalism-era",
         "image": "/img/minimalism/35.png",
         "price": "95,00"
     },
@@ -320,7 +320,7 @@
         "title": "White Code",
         "description": "Clean-lined brilliance, light-diffused balance — a minimalist's dream in perfect architectural symmetry.",
         "type": "Ceiling lamp",
-        "collection": "minimalism",
+        "collection": "minimalism-era",
         "image": "/img/minimalism/36.png",
         "price": "100,00"
     }

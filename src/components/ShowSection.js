@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 import { FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const items = [
   {
@@ -8,36 +9,42 @@ const items = [
     title: "Bubble Gum B*tch",
     desc: "Sugar, spice, and zero apologies. Pink lights for main character energy.",
     image: require("../img/bubbleGum.png"),
+    collection: "bubble-gum-btch"
   },
   {
     id: 2,
     title: "Arabian Nights",
     desc: "Dripping in drama. Velvet shadows, golden glow — mystery never looked this good.",
     image: require("../img/arabianNights.png"),
+    collection: "arabian-nights"
   },
   {
     id: 3,
     title: "Classique",
     desc: "Old money style, no dust. Think marble halls and perfectly placed lighting.",
     image: require("../img/classique.png"),
+    collection: "classique"
   },
   {
     id: 4,
     title: "Cozy Mozy",
     desc: "Soft lights, warm woods, all the cozy feels. Like a hug—but for your whole room.",
     image: require("../img/cozy.png"),
+    collection: "cozy-mozy"
   },
   {
     id: 5,
     title: "Gold Standard",
     desc: "All that glitters is gold. Loud, luxe, and impossible to ignore.",
     image: require("../img/gold.png"),
+    collection: "gold-standard"
   },
   {
     id: 6,
     title: "Minimalism Era",
     desc: "No clutter. No chaos. Just clean lines and quiet confidence.",
     image: require("../img/minimal.png"),
+    collection: "minimalism-era"
   },
 ];
 
@@ -61,12 +68,16 @@ export default function ShowSection() {
                   className="rounded-top-4" 
                 />
                 <Card.Body className="d-flex flex-column text-body">
+
                   <Card.Title className="fw-semibold fs-5">{item.title}</Card.Title>
+
                   <Card.Text className="text-muted flex-grow-1">{item.desc}</Card.Text>
+
                   <div className="mt-3">
                     <Button 
                       variant="outline-dark" 
-                      className=""
+                      as={Link}
+                      to={`/collection/${item.collection}`}
                     > More <FaArrowRight className="ms-2" />
                   </Button>
                   </div>
@@ -76,6 +87,7 @@ export default function ShowSection() {
             </Col>
           ))}
         </Row>
+
       </Container>
     </section>
   );

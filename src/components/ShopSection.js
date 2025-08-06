@@ -1,13 +1,12 @@
 import React from 'react';
-import { Card, Button, Container, Row, Col } from 'react-bootstrap';
+import { Button, Container, Spinner} from 'react-bootstrap';
 import { FaAngleRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import useFetch from './hooks/useFetch';
-import { useCart } from './context/CartContext';
 import useFilter from './hooks/useFilter';
+import ItemCard from './ItemCard';
 
 export default function ShopSection() {
-  const { addToCart } = useCart();
   const {items, isPending, error} = useFetch('http://localhost:8000/items');
   const {
     filteredItems,
@@ -24,7 +23,7 @@ export default function ShopSection() {
           <Link to="/" className="text-body-secondary">Start Page</Link> <FaAngleRight/> All Products
         </p>
 
-        <h2 className="mb-5 fw-bold">All products</h2>
+        <h2 className="mb-5 fw-semibold">All products</h2>
         <div className="mb-4 d-flex flex-wrap gap-2">
           {types.map(type => (
             <Button
@@ -38,30 +37,14 @@ export default function ShopSection() {
         </div>
 
         { error && <div className="mb-5">{ error }</div>}
-        { isPending && <div className="mb-5">Loading...</div> }
+        { isPending && (
+          <div className="text-center py-5">
+            <Spinner animation="border" variant="dark" />
+          </div>
+        ) }
 
-        <Row className="g-5">
-          {items && filteredItems.map(item => (
-            <Col key={item.id} xs={6} sm={6} md={4} lg={3}>
-              <Card className="shadow-sm border-0 h-100 d-flex flex-column">
-                <Card.Img 
-                  variant="bottom" 
-                  src={item.image}      
-                />
-                <Card.Body className="d-flex flex-column">
-                  <Card.Title className="fs-5 fw-semibold mb-1">{item.title}</Card.Title>
-                  <Card.Text className="mb-4">{item.price}$</Card.Text>
-                  <Button 
-                    variant="dark"
-                    className="mt-auto ms-auto"
-                    onClick={() => addToCart(item)}
-                  > Add to Cart
-                  </Button>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
+        <ItemCard items = {filteredItems}/>
+        
       </Container>
     </section>
   )
