@@ -2,11 +2,11 @@ import React from 'react';
 import { Button, Container, Spinner} from 'react-bootstrap';
 import { FaAngleRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import useFetch from './hooks/useFetch';
-import useFilter from './hooks/useFilter';
-import ItemCard from './ItemCard';
+import useFetch from '../components/hooks/useFetch';
+import useFilter from '../components/hooks/useFilter';
+import ItemCard from '../components/ItemCard';
 
-export default function ShopSection() {
+export default function ShopPage() {
   const {items, isPending, error} = useFetch('http://localhost:8000/items');
   const {
     filteredItems,

@@ -2,8 +2,8 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Container, Spinner, Alert } from 'react-bootstrap';
 import { FaAngleRight } from 'react-icons/fa';
-import useFetch from './hooks/useFetch';
-import ItemCard from './ItemCard';
+import useFetch from '../components/hooks/useFetch';
+import ItemCard from '../components/ItemCard';
 
 export default function CollectionPage() {
   const { name } = useParams();

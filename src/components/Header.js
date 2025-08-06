@@ -27,7 +27,7 @@ export default function Header() {
               onClick={toggleCart}
             >
               <div className="position-relative">
-                <span className="d-none d-sm-inline">Your Cart</span>
+                <span className="d-none d-sm-inline fw-normal">Your Cart</span>
                 <FaShoppingCart className="ms-2" size="30" />
                 <Badge
                   bg="secondary"
