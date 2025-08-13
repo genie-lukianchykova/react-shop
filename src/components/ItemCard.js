@@ -19,11 +19,14 @@ export default function ItemCard({items}) {
         {items && items.map(item => (
           <Col key={item.id} xs={6} sm={6} md={4} lg={3}>
             <Card className="shadow-sm border-0 h-100 d-flex flex-column">
-              <Card.Img 
-                variant="bottom" 
-                src={item.image}
-                onClick={() => handleOpenModal(item)}
-              />
+              <div className="image-container" onClick={() => handleOpenModal(item)}>
+                <Card.Img 
+                  variant="bottom" 
+                  src={item.image}
+                  
+                />
+                <div className="overlay-text">MORE</div>
+              </div>
               <Card.Body className="d-flex flex-column">
               <Card.Title className="fs-5 fw-semibold mb-1">{item.title}</Card.Title>
               <Card.Text className="mb-4">{item.price}$</Card.Text>

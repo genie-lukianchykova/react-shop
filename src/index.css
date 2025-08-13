@@ -77,18 +77,40 @@ header .cart-button.active {
   box-shadow: 0 30px 40px rgba(0, 0, 0, 0.1);
 }
 
+.image-container {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
 .card-img-bottom {
   object-fit: cover;
   height: 15em;
   padding: 0.7em;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.5s;
   border-radius: 0.9em;
+  width: 100%;
 }
 
-.card-img-bottom:hover {
+.overlay-text {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: normal;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.image-container:hover .card-img-bottom {
   transform: scale(1.05);
+  filter: brightness(70%);
 }
 
-
-
+.image-container:hover .overlay-text {
+  opacity: 1;
+}
 
