@@ -33,7 +33,7 @@ export default function ItemModal({ show, onHide, data }) {
           </Col>
 
           <Col md={6}>
-            <h5 className="mb-3 text-muted">{data.type}</h5>
+            <h5 className="mb-3 mt-3 text-muted">{data.type}</h5>
             <p>{data.description}</p>
             <p className="text-muted">
               <strong>Collection:</strong> {collectionTitles[data.collection] || data.collection}
