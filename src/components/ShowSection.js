@@ -60,7 +60,7 @@ export default function ShowSection() {
 
         <Row className="g-5">
           {items.map(item => (
-            <Col key={item.id} xs={6} sm={8} md={6} lg={4}>
+            <Col key={item.id} xs={12} sm={8} md={6} lg={4}>
               <Card className="shop-card h-100 d-flex flex-column">
                 <Card.Img 
                   variant="top" 
