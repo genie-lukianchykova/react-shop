@@ -32,8 +32,9 @@ src/
 
 ## 📝 Notes
 
-- Frontend-only project. No backend or database connection.
-- All product data is stored locally in a static file for demonstration purposes.
+- Frontend-only project.
+- All product and collection information is stored in a local JSON file.
+- It acts as a mock database for demonstration purposes.
 
 ## 📌 Goals
 
