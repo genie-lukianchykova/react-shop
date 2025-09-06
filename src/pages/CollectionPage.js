@@ -7,7 +7,7 @@ import ItemCard from '../components/ItemCard';
 
 export default function CollectionPage() {
   const { name } = useParams();
-  const { items, isPending, error } = useFetch('http://localhost:8000/items');
+  const { items, isPending, error } = useFetch('https://lumos-backend-4pcd.onrender.com/items');
   const collectionTitles = {
     "bubble-gum-btch": "Bubble Gum B*tch",
     "arabian-nights": "Arabian Nights",

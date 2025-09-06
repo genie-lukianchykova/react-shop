@@ -8,42 +8,42 @@ const items = [
     id: 1,
     title: "Bubble Gum B*tch",
     desc: "Sugar, spice, and zero apologies. Pink lights for main character energy.",
-    image: require("../img/bubbleGum.png"),
+    image: "/img/bubbleGum.png",
     collection: "bubble-gum-btch"
   },
   {
     id: 2,
     title: "Arabian Nights",
     desc: "Dripping in drama. Velvet shadows, golden glow — mystery never looked this good.",
-    image: require("../img/arabianNights.png"),
+    image: "/img/arabianNights.png",
     collection: "arabian-nights"
   },
   {
     id: 3,
     title: "Classique",
     desc: "Old money style, no dust. Think marble halls and perfectly placed lighting.",
-    image: require("../img/classique.png"),
+    image: "/img/classique.png",
     collection: "classique"
   },
   {
     id: 4,
     title: "Cozy Mozy",
     desc: "Soft lights, warm woods, all the cozy feels. Like a hug—but for your whole room.",
-    image: require("../img/cozy.png"),
+    image: "/img/cozy.png",
     collection: "cozy-mozy"
   },
   {
     id: 5,
     title: "Gold Standard",
     desc: "All that glitters is gold. Loud, luxe, and impossible to ignore.",
-    image: require("../img/gold.png"),
+    image: "/img/gold.png",
     collection: "gold-standard"
   },
   {
     id: 6,
     title: "Minimalism Era",
     desc: "No clutter. No chaos. Just clean lines and quiet confidence.",
-    image: require("../img/minimal.png"),
+    image: "/img/minimal.png",
     collection: "minimalism-era"
   },
 ];

@@ -5,17 +5,17 @@ import { useNavigate } from 'react-router-dom'
 const lamps = [
   {
     id: 1,
-    image: require("../img/lamp1.png"),
+    image: "/img/lamp1.png",
     title: "Crafted to shine."
   },
   {
     id: 2,
-    image: require("../img/lamp2.png"),
+    image: "/img/lamp2.png",
     title: "Designed to inspire."
   },
   {
     id: 3,
-    image: require("../img/lamp3.png"),
+    image: "/img/lamp3.png",
     title: "Powered by Lumos."
   },
 ];
