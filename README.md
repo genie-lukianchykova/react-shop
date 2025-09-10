@@ -2,7 +2,7 @@
 
 A simple and elegant online lighting store built with **React** and **React Bootstrap**.  
 This project is part of my frontend developer portfolio to demonstrate my skills in building responsive, component-based UIs.
-You can visit the website [here](https://lumos-shop.onrender.com)
+You can visit the website [here](https://lumos-shop.onrender.com).
 See Figma prototype [here](https://www.figma.com/proto/DCGOOoQtu7mB2CuXVNoSvk/Lumos?page-id=0%3A1&node-id=6-2&p=f&viewport=127%2C61%2C0.22&t=WGOCdKC5SPJOe3ZC-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=6%3A2) 
 
 ## ✨ Features
