@@ -43,6 +43,11 @@ src/
 - Work with React component structure and routing
 - Implement a clean, responsive layout using Bootstrap
 
+## 💡 Future Improvements
+
+- Logo for browser
+- Improving the mobile version
+
 ## 📫 Contact
 
 Feel free to reach out via [LinkedIn](www.linkedin.com/in/yevheniia-lukianchykova) if you'd like to connect!
