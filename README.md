@@ -46,7 +46,7 @@ src/
 
 ## 💡 Future Improvements
 
-- Logo for browser
+- Header animation
 - Improving the mobile version
 
 ## 📫 Contact
