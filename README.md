@@ -46,7 +46,6 @@ src/
 
 ## 💡 Future Improvements
 
-- Header animation
 - Improving the mobile version
 
 ## 📫 Contact

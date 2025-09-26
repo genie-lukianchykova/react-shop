@@ -16,7 +16,7 @@ export default function ShopPage() {
   } = useFilter(items);
   
   return (
-    <section className="py-3 bg-light text-body">
+    <section className="bg-light shop-text-body">
       <Container>
 
         <p className="text-muted mb-5">

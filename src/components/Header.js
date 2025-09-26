@@ -1,19 +1,40 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Button, Navbar, Nav, Badge} from 'react-bootstrap';
 import logo from '../img/logo.svg';
+import logoLight from '../img/logo-light.svg';
 import { FaShoppingCart } from "react-icons/fa";
 import ShopCart from './ShopCart';
 import { useCart } from './context/CartContext';
+import { useLocation, Link } from 'react-router-dom';
 
 export default function Header() {
   const { cart, toggleCart, cartOpen, closeCart } = useCart();
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div>
-      <Navbar className="bg-white py-4 px-4 fixed-top shadow-sm">       
-          <Navbar.Brand>
+      <Navbar 
+        fixed="top"
+        className={`header-navbar ${isHome && !scrolled ? "top" : "scrolled"}`}
+      >       
+          <Navbar.Brand as={Link} to="/">
             <img
-              src={logo}
+              src={`${isHome && !scrolled ? logoLight : logo}`}
               width="200"
               height="30"
               className="d-inline-block align-top"
@@ -27,8 +48,10 @@ export default function Header() {
               onClick={toggleCart}
             >
               <div className="position-relative">
-                <span className="d-none d-sm-inline fw-normal">Your Cart</span>
-                <FaShoppingCart className="ms-2" size="30" />
+                <span className={`d-none d-sm-inline fw-normal 
+                  ${isHome && !scrolled ? "text-white" : ""}`}
+                >Your Cart</span>
+                <FaShoppingCart className={`ms-2 ${isHome && !scrolled ? "text-white" : ""}`} size="30" />
                 <Badge
                   bg="secondary"
                   pill
